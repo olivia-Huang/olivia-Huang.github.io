@@ -501,8 +501,9 @@ article footer .tags {
   padding-top: 60px;
 }
 #cover #profile a {
-  font-size: 18px;
-  color: #333;
+  font-size: 30px;
+  font-weight: 700;
+  color: #e71f1f;
   text-transform: uppercase;
 }
 #cover #profile .logo {
@@ -514,10 +515,14 @@ article footer .tags {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   -webkit-box-shadow: 0 0 1px #fff;
   box-shadow: 0 0 1px #fff;
+}
+#cover #profile #subtitle {
+  font-size: 18px;
+  color: #ff0;
 }
 #cover #profile .my-socials {
   display: inline-block;
@@ -534,10 +539,10 @@ article footer .tags {
   text-decoration: none;
   display: block;
   text-align: center;
-  width: 30px;
-  height: 30px;
-  -webkit-border-radius: 30px;
-  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
   color: #fff;
 }
 #cover #profile .my-socials li a:hover {
@@ -547,6 +552,9 @@ article footer .tags {
 }
 #cover #profile .my-socials li .weibo {
   background-color: #e20021;
+}
+#cover #profile .my-socials li .facebook {
+  background-color: #2a6496;
 }
 #cover #profile .my-socials li .github {
   background-color: #333;
