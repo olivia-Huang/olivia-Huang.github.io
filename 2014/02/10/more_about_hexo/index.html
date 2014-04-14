@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta name="viewport" content="width=932" >
+  <meta name="MobileOptimized" content="932" >
+  <meta name="generator" content="Yanglei">
+  <title>我所知道的hexo</title>
+
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/awe.css">
+  <link rel="stylesheet" type="text/css" href="/css/social-likes.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="">
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/js/imgLiquid-min.js"></script>
+  <script src="/js/social-likes.min.js"></script>
+  <script src="/js/baidu_analysis.min.js"></script>
+</head>
+
+<body>
+  <div class="main-container">
+    
+
+<div class="box profile">
+  <div class="heading" style="background: #3e5354 url(/images/bg-heading.jpg) no-repeat;">
+    <div class="profile-img">
+      <a href="/"><img src="/images/img-profile.jpg" width="154" height="150" alt="image description"></a>
+    </div>
+    <strong class="user"><a href="/">Yanglei</a></strong>
+    <span class="locate">Beijing, China</span>
+  </div>
+  <div class="setting">
+    <a href="/" class="btn-articles">Articles</a>
+    <a href="/categories/PicSay" class="btn-photos">Photos</a>
+    <a href="/resume" class="btn-resume">Resume</a>
+  </div>
+</div>
+
+    
+<div class="two-columns post-page">
+  <div class="content">
+
+    <div class="post box nocover">
+      <em class="date"><span>10</span>2月</em>
+      <h2 class="post-title"><a href="/2014/02/10/more_about_hexo/">我所知道的hexo</a></h2>
+      <div class="post-content"><p><des_start>从开始搭博客到现在，陆陆续续也有二十多天了，来简单聊聊我所知道的hexo。<des_end></p>
+<p><img src="/img/20140210/1.png" alt="we">  </p>
+<p>就像旅行中对擦肩而过的那个女孩念念不忘，初用hexo，觉得很容易上手，架构很清晰。awe主题大方地展示图片，很对自己的胃口，就不用自己从头写了。于是想照自己的想法改点东西，但awe毕竟不如默认风格light那么成熟，改的过程中遇到不少问题，有些体会总结如下：</p>
+<blockquote>
+<h2 id="theme-">THEME结构</h2>
+</blockquote>
+<p>每个hexo主题都至少由以下几个部分构成</p>
+<p>├── _config.yml<br>├── languages<br>├── layout<br>├── scripts<br>└── source  </p>
+<p>其中languages用于配置语言包，比如在ejs文件中写&lt;%= __(&#39;tags&#39;) %&gt;，在根目录的config中配置了languages为zh-CN，就会到languages文件夹中选择zh-CN.yml文件中的对应项来翻译。</p>
+<p>_config.yml用于配置参数，scripts文件不是必须的，source文件中包含css,js以及用到的images。
+而layout中又包含至少包含这几个模板文件：</p>
+<p>├── layout.ejs<br>├── index.ejs<br>├── post.ejs<br>├── page.ejs<br>├── archive.ejs<br>├── tag.ejs<br>└── category.ejs  </p>
+<p>这几个文件其实都不是必须的，但是用这几个模板会让搭建变得很简单。</p>
+<p>不用模板文件的话，只需要在页面中加入layout:false，否则至少会使用layout.js布局。如果未指定layout，则会使用config文件中指定的default_layout。</p>
+<p>如果自己制定，写好layout以后，指定layout:xxx，其中xxx为文件夹名。在init产生的文件中，有一个scaffolds文件夹，这是干什么用的呢？scaffolds中的md文件，举个例子，执行hexo new post xxx时，就会使用scaffolds中的post.md模板。</p>
+<blockquote>
+<h2 id="yaml-">YAML语法</h2>
+</blockquote>
+<p>hexo中很多地方都使用了YAML语法（比XML简洁得多），比如想给一篇文章打上多个tag的时候，可以这么写：</p>
+<pre>
+tags:  
+- tag1
+- tag2
+</pre>
+
+<p>要注意YAML语法格式的正确，比如-后要加空格。</p>
+<blockquote>
+<h2 id="hexo-">HEXO的小缺陷</h2>
+</blockquote>
+<p>在服务器运行的时候，如果你手动新增了一个文件夹，并把它改名，下一次编译的时候，就有可能提示说无法打开“xxx/xxx/新建文件夹”。这是因为这些都被记录在了db.json中，遇到这种情况清空db.json文件或者执行  <pre>hexo clean</pre></p>
+<p>在发布的时候，记得删掉public和.deploy文件夹重新生成一次，清空db.json文件文件也可以，否则public和.deploy文件夹只会有增无减。</p>
+<p>当然，如果删掉数据库的话，里面的原有信息也会丢失，比如最后修改时间就都变成了生成时的时间。因此一旦发布，还是不要随意删除数据库。</p>
+<blockquote>
+<h2 id="-">博客推荐</h2>
+</blockquote>
+<p>趁着寒假没有干其他事的动力，想把博客搭得漂亮一点，虽然在意料之中地失败了，但也借此机会欣赏了很多漂亮的博客，推荐几个自己觉得风格不错的个人博客：<br><a href="http://zespia.tw/" target="_blank">zespia</a>（hexo主人自己的，docs简约清新）<br><a href="http://hahack.com/" target="_blank">hahack</a>（wiki尤其赞，简历也很棒）<br>还有一个是大帝推荐的，我觉得也很好：<br><a href="http://beiyuu.com/" target="_blank">BeiYuu</a>（IOS风格）</p>
+</div>
+
+      <div class="bottom-panel">
+        <ul class="social-likes" data-url="/2014/02/10/more_about_hexo/">
+        </ul>
+        Last updated: 2014-02-10 22:22:50
+      </div>
+    </div>
+    
+    <div class="widget post-comment">
+      <h2 class="title">Comments</h2>
+      
+         <div id="disqus_thread">
+           <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+         </div>
+      
+    </div>
+    
+  </div>
+
+  <div class="widgetarea">
+
+    
+
+    
+      
+<div class="widget">
+  <h3 class="title">tagcloud</h3>
+  <div class="tagcloud-ball" id="tagcloud">
+    
+    <a class="tagcloud" href="/tags/2013/">2013</a>
+    
+    <a class="tagcloud" href="/tags/HKUST/">HKUST</a>
+    
+    <a class="tagcloud" href="/tags/hexo/">hexo</a>
+    
+    <a class="tagcloud" href="/tags/旅行/">旅行</a>
+    
+    <a class="tagcloud" href="/tags/朋友/">朋友</a>
+    
+    <a class="tagcloud" href="/tags/爱情公寓/">爱情公寓</a>
+    
+    <a class="tagcloud" href="/tags/阿嫲/">阿嫲</a>
+    
+    <a class="tagcloud" href="/tags/香港/">香港</a>
+    
+  </div>
+</div>
+
+<script src="/js/tagcloud.min.js"></script>
+    
+      
+<div class="widget tag">
+  <h3 class="title">categories</h3>
+  <ul class="list-group">
+  
+    <li class="list-group-item">
+    	<span class="list-group-badge">2</span>
+    	<a href="/categories/Life/">Life</a>
+    </li>
+  
+    <li class="list-group-item">
+    	<span class="list-group-badge">2</span>
+    	<a href="/categories/PicSay/">PicSay</a>
+    </li>
+  
+    <li class="list-group-item">
+    	<span class="list-group-badge">1</span>
+    	<a href="/categories/Tech/">Tech</a>
+    </li>
+  
+  </ul>
+</div>
+
+    
+      <div class="widget tag">
+<h3 class="title">blogroll</h3>
+<ul class="list-group">
+<li><a href="http://dangfan.me/" target="_blank" title="Terro's Blog">有一说一</a></li>
+<li><a href="http://wenqingfu.me/" target="_blank" title="Vince's Blog">做人低调</a></li>
+</ul>
+</div>
+    
+
+  </div>
+</div>
+
+
+  </div>
+  
+<div class="footer">
+  <div class="container">
+    <a href="//github.com/kywk/hexo-theme-awe">AWE for hexo</a> 
+    ported by <a href="//kywk.github.io/">MooCow (Aka. kywk)</a>.
+    
+    &copy; 2014 Yanglei All Rights Reserved
+    
+  </div>
+</div>
+
+  
+<script>
+  var disqus_shortname = 'yangleime';
+  
+  var disqus_url = 'http://yanglei.me/2014/02/10/more_about_hexo/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script>
+$(document).ready(function() {
+  $('.imgLiquid').imgLiquid({fill:true, fadeInTime:500});
+});
+</script>
+
+</body>
+</html>
