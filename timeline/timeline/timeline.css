@@ -1,0 +1,466 @@
+body{
+    background: #f9f9f9 url(./images/cloth.jpg) repeat top left;
+    color: rgba(0,0,0,0.8);
+    font-family: 'Kelly Slab','Myriad Pro', Arial, sans-serif;
+    font-size: 15px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+.clr{
+    clear: both;
+}
+h1{
+    font-size: 24px;
+    position:relative;
+    font-weight: 400;
+    padding: 30px 5px 10px 5px;
+	margin: 0px 15px;
+	color: rgba(153,157,181,0.6);
+	text-shadow: 0px 1px 1px #fff;
+	border-bottom: 1px solid rgba(17,17,22,0.1);
+}
+/* Header Style */
+.header{
+    font-family:'Arial Narrow', Arial, sans-serif;
+    line-height: 24px;
+    font-size: 11px;
+    background: #000;
+    opacity: 0.9;
+    text-transform: uppercase;
+    z-index: 9999;
+    position: relative;
+    -moz-box-shadow: 1px 0px 2px #000;
+    -webkit-box-shadow: 1px 0px 2px #000;
+    box-shadow: 1px 0px 2px #000;
+}
+.header a{
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    color: #ddd;
+    display: block;
+    float: left;
+}
+.header a:hover{
+    color: #fff;
+}
+.header span.right{
+    float: right;
+}
+.header span.right a{
+    float: none;
+    display: inline;
+}
+h2.ss-subtitle{
+    padding: 10px 10px 40px;
+    font-size: 52px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.8);
+	position: relative;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+h2.ss-subtitle:before{
+	width: 4px;
+	height: 40px;
+	background: rgba(17,17,22,0.8);
+	content: '';
+	position: absolute;
+	right: 75%;
+	margin-right: -4px;
+	bottom: -4px;
+	-moz-border-radius: 2px 2px 0px 0px;
+	-webkit-border-radius: 2px 2px 0px 0px;
+	border-radius: 2px 2px 0px 0px;
+}
+h2.ss-subtitle:after{
+	width: 25%;
+	height: 0px;
+	border-bottom: 4px dotted rgba(17,17,22,0.8);
+	content: '';
+	position: absolute;
+	right: 50%;
+	margin-right: -1px;
+	bottom: -4px;
+}
+.ss-links{
+	position: fixed;
+	left: 10px;
+	top: 166px;
+	width: 75%;
+	z-index: 100;
+}
+.ss-links a{
+	background: rgba(0,0,0,0.2);
+	font-size: 16px;
+	width: 55px;
+	height: 55px;
+	line-height: 55px;
+	margin: 5px;
+	float: left;
+	border-radius: 50%;
+	display: block;
+	text-align: center;
+	-webkit-transition: background 0.2s linear;
+	-moz-transition: background 0.2s linear;
+	-o-transition: background 0.2s linear;
+	-ms-transition: background 0.2s linear;
+	transition: background 0.2s linear;
+}
+.ss-links a:hover{
+	background: rgba(0,0,0,0.4);
+}
+.ss-container{
+    width: 100%;
+    position: relative;
+    text-align: left;
+    float: left;
+	overflow: hidden;
+	padding-bottom: 150px;
+}
+.ss-container h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: rgba(78,84,123,0.2);
+	text-shadow: 0px 1px 1px #fff;
+	padding: 20px 0px;
+}
+.ss-container:before{
+    position: absolute;
+    width: 4px;
+    background: rgba(17,17,22,0.8);
+    top: 0px;
+    left: 50%;
+	margin-left: -2px;
+    content: '';
+    height: 100%;
+}
+.ss-row{
+    width: 100%;
+    clear: both;
+    float: left;
+    position: relative;
+    padding: 30px 0;
+}
+.ss-left, .ss-right{
+    float: left;
+    width: 48%;
+    position: relative;
+}
+.ss-right{
+    padding-left: 2%;
+}
+.ss-left{
+    text-align: right;
+    float: left;
+    padding-right: 2%;
+}
+.ss-circle{
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    text-indent: -9000px;
+    text-align: left;
+    -webkit-box-shadow: 
+		0px 2px 5px rgba(0,0,0,0.7) inset, 
+		0px 0px 0px 12px rgba(61,64,85,0.3);
+    -moz-box-shadow: 
+		0px 2px 5px rgba(0,0,0,0.7) inset, 
+		0px 0px 0px 12px rgba(61,64,85,0.3);
+    box-shadow: 
+		0px 2px 5px rgba(0,0,0,0.7) inset, 
+		0px 0px 0px 12px rgba(61,64,85,0.3);
+	background-size: cover;
+	background-color: #f0f0f0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: static;
+}
+.ss-small .ss-circle{
+	width: 100px;
+	height: 100px;
+}
+.ss-medium .ss-circle{
+	width: 200px;
+	height: 200px;
+}
+.ss-large .ss-circle{
+	width: 300px;
+	height: 300px;
+}
+.ss-circle-deco:before{
+	width: 29%;
+	height: 0px;
+	border-bottom: 5px dotted #ddd;
+	border-bottom: 5px dotted rgba(17, 17, 22, 0.3);
+	-webkit-box-shadow: 0px 1px 1px #fff;
+	-moz-box-shadow: 0px 1px 1px #fff;
+	box-shadow: 0px 1px 1px #fff;
+	position: absolute;
+	top: 50%;
+	content: '';
+	margin-top: -3px;
+}
+.ss-circle-deco:after{
+	width: 0px;
+	height: 0px;
+	border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+	content: '';
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+}
+.ss-left .ss-circle-deco:before{
+    right: 2%;   
+}
+.ss-right .ss-circle-deco:before{
+    left: 2%;   
+}
+.ss-left .ss-circle-deco:after{
+	right: 0;
+	border-right: 10px solid rgba(17,17,22,0.8);
+}
+.ss-right .ss-circle-deco:after{
+	left: 0;
+	border-left: 10px solid rgba(17,17,22,0.8);
+}
+.ss-left .ss-circle{
+    float: right;
+    margin-right: 30%;
+}
+.ss-right .ss-circle{
+    float: left;
+    margin-left: 30%;
+}
+.ss-container h3{
+    margin-top: 34px;
+	padding: 10px 15px;
+	background: rgba(26, 27, 33, 0.6);
+	text-shadow: 1px 1px 1px rgba(26, 27, 33, 0.8)
+}
+.ss-container .ss-medium h3{
+	margin-top: 82px;
+}
+.ss-container .ss-large h3{
+	margin-top: 133px;
+}
+.ss-container .ss-left h3{
+	border-right: 5px solid rgba(164,166,181,0.8);
+}
+.ss-container .ss-right h3{
+	border-left: 5px solid rgba(164,166,181,0.8);
+}
+.ss-container h3 span{
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    display: block;
+    padding-bottom: 5px;
+}
+.ss-container h3 a{
+    font-size: 24px;
+    color: rgba(255,255,255,0.9);
+    display: block;
+}
+.ss-perspect{
+    -webkit-perspective: 600px; 
+    -webkit-perspective-origin-x: 50%; 
+    -webkit-perspective-origin-y: 0%;
+}
+.ss-transform{
+    -webkit-transform: translate3d(-75%, 0px, 0px) rotateY(-90deg) translate3d(-75%, 0px, 0px); 
+    opacity: 0;
+}
+.ss-clock-transform{
+    -webkit-transform: translate3d(75%, 0px, 0px) rotateY(90deg) translate3d(75%, 0px, 0px);
+    opacity: 0;
+}
+.ss-container h3 a:hover{
+	color: rgba(255,255,255,1);
+}
+
+.ss-circle-130426{
+    background-image:url(./images/130426.png);
+}
+.ss-circle-130429{
+    background-image:url(./images/130429.png);
+}
+.ss-circle-130505{
+    background-image:url(./images/130505.png);
+}
+.ss-circle-130506{
+    background-image:url(./images/130506.png);
+}
+.ss-circle-130510{
+    background-image:url(./images/130510.png);
+}
+.ss-circle-130511{
+    background-image:url(./images/130511.png);
+}
+.ss-circle-130516{
+    background-image:url(./images/130516.png);
+}
+.ss-circle-130521{
+    background-image:url(./images/130521.png);
+}
+.ss-circle-130526{
+    background-image:url(./images/130526.png);
+}
+.ss-circle-130602{
+    background-image:url(./images/130602.png);
+}
+.ss-circle-130603{
+    background-image:url(./images/130603.png);
+}
+.ss-circle-130615{
+    background-image:url(./images/130615.png);
+}
+.ss-circle-130619{
+    background-image:url(./images/130619.png);
+}
+.ss-circle-130620{
+    background-image:url(./images/130620.png);
+}
+.ss-circle-130626{
+    background-image:url(./images/130626.png);
+}
+.ss-circle-130627{
+    background-image:url(./images/130627.png);
+}
+.ss-circle-130628{
+    background-image:url(./images/130628.png);
+}
+.ss-circle-130704{
+    background-image:url(./images/130704.png);
+}
+.ss-circle-130709{
+    background-image:url(./images/130709.png);
+}
+.ss-circle-130710{
+    background-image:url(./images/130710.png);
+}
+.ss-circle-130713{
+    background-image:url(./images/130713.png);
+}
+.ss-circle-130716{
+    background-image:url(./images/130716.png);
+}
+.ss-circle-130717{
+    background-image:url(./images/130717.png);
+}
+.ss-circle-130720{
+    background-image:url(./images/130720.png);
+}
+.ss-circle-130724{
+    background-image:url(./images/130724.png);
+}
+.ss-circle-130725{
+    background-image:url(./images/130725.png);
+}
+.ss-circle-130726{
+    background-image:url(./images/130726.png);
+}
+.ss-circle-130727{
+    background-image:url(./images/130727.png);
+}
+.ss-circle-130731{
+    background-image:url(./images/130731.png);
+}
+.ss-circle-130801{
+    background-image:url(./images/130801.png);
+}
+.ss-circle-130808{
+    background-image:url(./images/130808.png);
+}
+.ss-circle-130812{
+    background-image:url(./images/130812.png);
+}
+.ss-circle-130816{
+    background-image:url(./images/130816.png);
+}
+.ss-circle-130824{
+    background-image:url(./images/130824.png);
+}
+.ss-circle-130825{
+    background-image:url(./images/130825.png);
+}
+.ss-circle-130830{
+    background-image:url(./images/130830.png);
+}
+.ss-circle-130903{
+    background-image:url(./images/130903.png);
+}
+.ss-circle-130911{
+    background-image:url(./images/130911.png);
+}
+.ss-circle-130919{
+    background-image:url(./images/130919.png);
+}
+.ss-circle-130926{
+    background-image:url(./images/130926.png);
+}
+.ss-circle-130928{
+    background-image:url(./images/130928.png);
+}
+.ss-circle-131004{
+    background-image:url(./images/131004.png);
+}
+.ss-circle-131008{
+    background-image:url(./images/131008.png);
+}
+.ss-circle-131012{
+    background-image:url(./images/131012.png);
+}
+.ss-circle-131016{
+    background-image:url(./images/131016.png);
+}
+.ss-circle-131023{
+    background-image:url(./images/131023.png);
+}
+.ss-circle-131106{
+    background-image:url(./images/131106.png);
+}
+.ss-circle-131107{
+    background-image:url(./images/131107.png);
+}
+.ss-circle-131116{
+    background-image:url(./images/131116.png);
+}
+.ss-circle-131213{
+    background-image:url(./images/131213.png);
+}
+.ss-circle-131223{
+    background-image:url(./images/131223.png);
+}
+.ss-circle-140131{
+    background-image:url(./images/140131.png);
+}
+.ss-circle-140202{
+    background-image:url(./images/140202.png);
+}
+.ss-circle-140209{
+    background-image:url(./images/140209.png);
+}
+.ss-circle-140215{
+    background-image:url(./images/140215.png);
+}
+.ss-circle-140227{
+    background-image:url(./images/140227.png);
+}
+.ss-circle-140228{
+    background-image:url(./images/140228.png);
+}
+.ss-circle-140321{
+    background-image:url(./images/140321.png);
+}
+.ss-circle-140405{
+    background-image:url(./images/140405.png);
+}
+.ss-circle-140411{
+    background-image:url(./images/140411.png);
+}
